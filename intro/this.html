@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        var x = 10;
+        var ray = {
+            x: 100,
+            name: 'Ray Hengst',
+            sayHello: function (id, country) { // context
+                console.log('Hello world from ' + this.name + '!!! ID: ' + id + ' from country ' + country);
+                console.log('x statement outside immediate function ... ' + this.x);
+                (function () {
+                    console.log('Inside the immediate function ... ' + this.x);
+                }());
+
+            }
+        };
+
+        var bp = {
+            name: 'Bindhyeswari Prasad Mishra'
+        };
+
+        ray.sayHello('1234', 'USA');
+        ray.sayHello.call(bp, '1234', 'USA');
+
+        function testGlobals() {
+            console.log(this.x);
+        }
+
+        testGlobals();
+
+        ray.sayHello();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
