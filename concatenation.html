@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var str = 'Ray';
+
+        // falsy values
+        // 0, '', NaN, false, undefined, null
+
+
+        console.log(false == 'false');
+
+        if (null === null) {
+            console.log('Evaluating true ... ');
+        } else {
+            console.log('Evaluating false ... ');
+        }
+
+        var x = {
+            val: '12',
+            toString: function () {
+                return String(this.val);
+            }
+        };
+
+        var y = {
+            val: 13,
+            valueOf: function () {
+                return this.val;
+            }
+        };
+
+        console.log(typeof ++x);
+
+
+        console.log(typeof NaN);
+        console.log(str + 1);
+
+        console.log({} + 1);
+
+
+        if (typeof x.noproperty === 'undefined') {
+            console.log('property does not exist!!');
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

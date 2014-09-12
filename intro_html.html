@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        //
+
+        function Car() {
+            this.wheels = 4;
+        }
+
+        // Prototypal inheritance
+        // attribute prototype
+
+        var car = new Car();
+        console.log('car.wheels = ' + car.wheels);
+
+        function add(x, y) { // x --> bool, y --> number
+            x = x + y;
+            return x + y;
+        }
+
+        var obj = {
+            name: 'Ray Hengst'
+        }; // Object Literal
+
+        var str = 'name';
+        console.log('Name of obj is ' + obj[str]);
+
+        obj.id = '1234';
+        var x = 23;
+        console.log(x);
+    </script>
+</head>
+<body>
+    <div id="ray">
+        Hello world from Ray!
+    </div>
+</body>
+</html>
