@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        // Object --> function
+        // Object.prototype --> property of the Object function
+        // It points to an object which will be treated as the parent
+
+        var base = { gender: 'male' };
+
+        var person = Object.create(base);
+
+        person.gender = 'female';
+
+        var ray = Object.create(person);
+
+        console.log(ray.gender);
+
+        // Constructors
+        function Car() {
+            var wheels = 4;
+        }
+
+
+        Car.prototype.wheels = 10;
+        var car = new Car();
+        console.log(car.wheels);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
