@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font: 200 1em 'Helvetica Neue', 'Segoe UI', 'Droid Sans', Helvetica;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0;
+            display: inline-block;
+            color: red;
+            padding: 0.25em 0.55em;
+            border-right: 1px solid #ff807d;
+            float: left;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: red;
+            color: white;
+            transition: all 1s ease;
+        }
+
+        li.right {
+            float: right;
+        }
+
+        div.header {
+           background-color: rgba(255, 167, 170, 0.7);
+            overflow: auto;
+            position: fixed;
+            width: 100%;
+        }
+
+        div.main_container {
+            width: 60%;
+            min-height: 1000px;
+            background-color: greenyellow;
+            float: left;
+            border-left: 1px solid red;
+            box-sizing: border-box; /*css3 property*/
+        }
+
+        div.left_nav {
+            float: left;
+            width: 15%;
+            min-height: 200px;
+            background-color: #ffd3d5;
+        }
+
+        div.aside {
+            float: left;
+            width: 25%;
+            min-height: 500px;
+            background-color: green;
+        }
+
+    div.wrapper {
+        padding-top: 1.75em;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li>GoLiveLabs</li>
+            <li><a href="http://www.google.com">google.com</a></li>
+            <li class="right">Login</li>
+            <li class="right">My Account</li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <div class="left_nav">
+
+        </div>
+        <div class="main_container">
+
+        </div>
+        <div class="aside">
+
+        </div>
+    </div>
+</body>
+</html>
