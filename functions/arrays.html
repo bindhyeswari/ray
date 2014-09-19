@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var arr = [1,2,3,4,5];
+        var x = arr.forEach(function (elem) {
+            console.log(elem);
+        });
+
+        console.log(x);
+
+        var squared = arr.map(function (elem) {
+            return elem * elem;
+        });
+
+        var filtered = arr.filter(function (elem) {
+            return elem % 2 === 0;
+        });
+
+        var reduced = arr.reduce(function (a, b) {
+            return a + b;
+        });
+
+        console.log(reduced);
+
+        console.log([{x: 32, name: 'Ray'}, {x: 16, name:'mishra'}].reduce(function (a, b) {
+            x = 16;
+            return a.x + b.x;
+        }));
+
+        console.log(x);
+
+        console.log([1,2,3,4,5].slice());
+
+        var arr2 = [1,2,3,4,5,6];
+        console.log(arr2.splice(0,3,'ray', 'asdf'));
+        console.log(arr2);
+
+
+
+        // console.log(add(1, 2));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

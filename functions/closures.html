@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        function returnFunction () {
+            var x = 0;
+            return function () {
+                console.log(x++);
+            }
+        }
+
+        function retObj () {
+            var x = 10;
+            var y = 0;
+            y++;
+            return {
+                increment: function () {
+                    x++;
+                },
+                decrement: function () {
+                    x--;
+                },
+                print: function () {
+                    console.log(x);
+                }
+            }
+        }
+
+        console.log('*************');
+        var obj = retObj();
+        obj.print();
+        obj.increment();
+        obj.print();
+        console.log('*************\n');
+        var fn = returnFunction();
+        var fn2 = returnFunction();
+        fn();
+        fn();
+        fn();
+        fn();
+        fn();
+        fn();
+
+        console.log('fn2 ... ');
+        fn2();
+        fn2();
+        fn2();
+        fn2();
+        fn2();
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

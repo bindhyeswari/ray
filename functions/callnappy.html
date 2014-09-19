@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function invoker (fn) {
+            // invoke the fn with the desired inputs
+            fn.apply(null, Array.prototype.slice.call(arguments, 1));
+        }
+
+        function add (x, y) {
+            return x + y;
+        }
+
+        function squared_sum () {
+            var args = Array.prototype.slice.call(arguments);
+
+            return args.map(function (elem) {
+                return elem * elem;
+            }).reduce(function (a, b) {
+                return a + b;
+            });
+        }
+
+
+        //var x = 10;
+
+
+        try {
+            console.log(x);
+        } catch (e) {
+            console.log(e.message);
+        }
+
+        invoker(add, 1, 2); // should return 3
+        invoker(squared_sum, 1, 2, 3, 4); // should return 30
+
+        var obj = {
+            id: 32,
+            print: function (message) {
+                console.log(message + this.id);
+            }
+        };
+
+        var obj2 = {
+            id: 64
+        };
+        obj.print('Id is ... ');
+        var fn = obj.print.bind(obj2, 'Id is ... ');
+        fn('asdfasdf');
+
+        function sayHello(message) {
+            console.log(message);
+        }
+
+        var i = 0;
+        var intervalid = setInterval(function () {
+            console.log(i++);
+            if (i === 5) {
+                clearInterval(intervalid);
+                console.log('Stopped interval ... ' + intervalid);
+            }
+        }, 1000);
+
+        setTimeout(sayHello.bind(null, 'Say Hello from Ray!'), 1000);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
